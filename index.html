@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Website Travel Keskil</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <header class="header" id="header-section">
+        <div class="header-container">
+            <img class="menu-btn" id="open-cta" src="images/menu-white.svg" alt="menu button" onclick="openNav()">
+            
+            <nav class="navbar" id="navbar-section">
+                
+                <img class="close-btn" id="close-cta" src="images/close.svg" alt="close button" onclick="closeNav()">
+                <ul>
+                    <li><a href="#">ABOUT</a></li>
+                    <li><a href="#explore">EXPLORE</a></li>
+                    <li><img src="images/location.svg" alt="Location icon"></li>
+                    <li><a href="#journal">JOUNAL</a></li>
+                    <li><a href="#contacts">CONTACTS</a></li> 
+                </ul>
+                
+            </nav>
+        </div>
+        
+        <div class="text-wrapper">
+            <div class="text-inner">
+                <h1 class="upper-text">The World Around Us </h1>
+                <p class="down-text">Wander often. Wander always. Сделан Кэскилэм</p>
+            </div>
+        </div>
+    </header>
+    <section class="wrapper1" id="explore">
+        <div class="text">
+            <h1>Explore the World</h1>
+            <p>We seek to provide the most interesting content from adventures,
+                explorers and travellers around the world.
+            </p>
+        </div>
+        <div class="photo-three-rows">
+            <div class="photo">
+                <img src="images/image1.jpeg" alt="photo 1">
+                <div class="layer">
+                    Польша/Poland
+                </div>
+            </div>
+            <div class="photo">
+                <img src="images/image2.jpeg" alt="photo 2">
+                <div class="layer">
+                    Япония/Japan
+                </div>
+            </div>
+            <div class="photo">
+                <img src="images/image3.jpeg" alt="photo 3">
+                <div class="layer">
+                    Швейцария/Switzerland
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="wrapper2" id="journal">
+        <div class="text">
+            <h1>The Journal</h1>
+            <p>We want you travel with all commodities.</p>
+        </div>
+        <div class="photo-two-rows">
+            <div class="image-column">
+                <img src="images/image4.jpeg" alt="image 1">
+                <div class="image-text">
+                    <h1>Beautiful Valleys</h1>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Placeat ab cupiditate iure aliquam a voluptatibus aut earum odio sint.</p>  
+                </div>
+               
+            </div>
+            <div class="image-column">
+                <img src="images/image5.jpeg" alt="image 2">
+                
+                <div class="image-text">
+                    <h1>Big mountains and etc.</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid, odit soluta nam eius placeat consequatur dicta.</p>  
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="footer-section" id="contacts">
+            <h1>&copy; 2022 Made by Keskil Nazarov</h1>
+            <a href="https://t.me/Learning_C_sharp_with_me" target="_blank"><img src="images/telegram.png" alt="click me"></a>
+            <h1 class="telegram">My Telegram</h1>
+        </div>
+    </footer>
+
+    <script>
+        const menuBtn = document.getElementById("open-cta");
+        const closeBtn = document.getElementById("close-cta");
+        const nav = document.querySelector('nav');
+        /* Open */
+        function openNav() {
+            document.querySelector('nav').style.display = "flex";
+        }
+
+        /* Close */
+        function closeNav() {
+            document.querySelector('nav').style.display = "none";
+        } 
+      
+    </script>
+</body>
+</html>

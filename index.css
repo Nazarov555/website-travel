@@ -1,0 +1,230 @@
+@import url('https://fonts.googleapis.com/css2?family=Chivo+Mono:wght@300&family=Oleo+Script&display=swap');
+
+:root {
+    --Chivo-Mono: 'Chivo Mono', monospace;
+    --Oleo-Script: 'Oleo Script', cursive;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: black;
+    height: auto;
+    font-family: var(--Oleo-Script);
+}
+
+.header {
+    background-image: url(images/image-banner.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 60vh;
+    width: 100%;
+}
+.navbar ul {
+    display: flex;
+    justify-content: center;
+    
+}
+
+.navbar ul li {
+    list-style: none;
+    margin: 15px 5em;
+}
+
+.navbar ul li a {
+    color: white;
+    text-decoration: none;
+    position: relative;
+}
+
+.navbar ul li a::before {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 3px;
+    background: red;
+    bottom: 0;
+    margin-bottom: -3px;
+    transition: 0.5s;
+}
+
+.navbar ul li a:hover::before {
+    width: 100%;
+}
+
+.text-wrapper {
+    text-align: center;
+    margin: 2em auto;
+}
+
+.text-wrapper .text-inner {
+    color: white;
+}
+
+.text-wrapper .text-inner h1 {
+    font-size: 3em;
+}
+
+.wrapper1 .text {
+    text-align: center;
+    margin-top: 7em;
+    color: white;
+    font-size: 1.5em;
+}
+
+.wrapper1 .photo-three-rows {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3em;
+    gap: 5rem;
+}
+
+.wrapper1 .photo-three-rows .photo img {
+    height: 22em;
+    width: 17em;
+    border-radius: 20px;
+}
+
+.wrapper1 .photo-three-rows .photo {
+    position: relative;
+}
+
+.wrapper1 .photo-three-rows .photo .layer {
+    color: white;
+    position: absolute;
+    display: block;
+    bottom: 0;
+    left: 16%;
+    padding-bottom: 1.5em;
+    font-size: 20px;
+}
+
+.wrapper2 .photo-two-rows {
+    margin-top: 2em;
+    display: flex;
+    text-align: center;
+    gap: 3em;
+}
+
+.wrapper2 .photo-two-rows .image-column img {
+    width: 25em;
+    height: 15em;
+    border-radius: 20px;
+}
+
+.wrapper2 .text {
+    text-align: center;
+    margin-top: 5em;
+    color: white;
+    font-size: 1.5em;
+}
+
+.wrapper2 .photo-two-rows .image-text {
+    color: white;
+    text-align: left;
+    padding: 0 5em;
+    margin-top: 1em;
+}
+
+.wrapper2 .photo-two-rows .image-column h1 {
+    color: white;
+    text-align: center;
+}
+
+footer {
+    font-family: var(--Chivo-Mono);
+    background-image: url(images/image-footer.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100vw;
+    height: 100vh;
+    margin-top: 8em;
+    position: relative;
+}
+
+.footer-section {
+    text-align: center;
+    color: white;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.footer-section .telegram {
+    color: lightblue;
+}
+
+.menu-btn {
+    display: none;
+}
+
+.close-btn {
+    display: none;
+}
+
+
+@media screen and (max-width: 990px) {
+  
+    .text-wrapper .text-inner h1 {
+        padding-top: 1em;
+    }
+
+    .wrapper1 .photo-three-rows {
+        flex-direction: column;
+    }    
+    .wrapper2 .photo-two-rows {
+        flex-direction: column;
+    } 
+    
+    .menu-btn {
+        display: inline;
+        position: fixed;
+        right: 1em;
+        cursor: pointer;
+        z-index: 999;
+    }
+    nav {
+        display: none;
+        position: fixed;
+        right: 29px;
+        z-index: 999;
+        width: 40%;
+        height: 100%;
+        background-color: gray;
+        margin: -32px -30px;
+    }
+    .navbar ul {
+        flex-direction: column;
+    }
+   
+    .close-btn {
+        display: inline;
+        right: 1.5em;
+        top: 5%;
+        position: absolute;
+        cursor: pointer;
+    }
+}
+
+@media screen and (max-width: 410px) {
+    .wrapper2 .photo-two-rows .image-column img {
+        width: 15em;
+    }
+    .wrapper2 .photo-two-rows .image-text {
+        padding: 0 1em;
+    }
+    .navbar ul li {
+        margin-left: 9px;
+    }
+
+    .footer-section h1 {
+        font-size: 20px;
+    }
+}
