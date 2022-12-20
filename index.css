@@ -10,6 +10,11 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+*::selection {
+    background: purple;
+    color: white;
 }
 
 body {
@@ -18,13 +23,27 @@ body {
     font-family: var(--Oleo-Script);
 }
 
-.header {
+.wrapper0 {
     background-image: url(images/image-banner.jpg);
     background-position: center;
     background-size: cover;
     height: 60vh;
     width: 100%;
+    margin-top: -12em;
 }
+.text-inner {
+    padding-top: 8em;
+}
+.header {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%);
+    width: 100%;
+    z-index: 999;
+    background-color: pink;
+}
+
 .navbar ul {
     display: flex;
     justify-content: center;
@@ -59,7 +78,7 @@ body {
 
 .text-wrapper {
     text-align: center;
-    margin: 2em auto;
+    margin: 10em auto;
 }
 
 .text-wrapper .text-inner {
@@ -172,10 +191,7 @@ footer {
 
 @media screen and (max-width: 990px) {
   
-    .text-wrapper .text-inner h1 {
-        padding-top: 1em;
-    }
-
+  
     .wrapper1 .photo-three-rows {
         flex-direction: column;
     }    
@@ -184,16 +200,18 @@ footer {
     } 
     
     .menu-btn {
-        display: inline;
+        display: inline-block;
         position: fixed;
-        right: 1em;
+        top: 2em;
+        right: 2em;
         cursor: pointer;
         z-index: 999;
     }
     nav {
         display: none;
         position: fixed;
-        right: 29px;
+        right: 0;
+        top: 1em;
         z-index: 999;
         width: 40%;
         height: 100%;
@@ -202,12 +220,22 @@ footer {
     }
     .navbar ul {
         flex-direction: column;
+        height: 130vh;
+        padding-bottom: 25em;
+    }
+    .navbar ul li{
+        margin-left: auto;
+    }
+
+    .navbar {
+        height: 120vh;
+        background-color: pink;
     }
    
     .close-btn {
-        display: inline;
-        right: 1.5em;
-        top: 5%;
+        display: block;
+        right: 5em;
+        top: 3%;
         position: absolute;
         cursor: pointer;
     }
